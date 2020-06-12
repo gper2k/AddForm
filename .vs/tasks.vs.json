@@ -10,6 +10,11 @@
       "taskLabel": "task-Default",
       "appliesTo": "src/Default.html",
       "type": "launch"
+    },
+    {
+      "taskLabel": "task-AddForm",
+      "appliesTo": "/",
+      "type": "launch"
     }
   ]
 }
