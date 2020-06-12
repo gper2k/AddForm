@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-AddForm",
+      "appliesTo": "/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-Default",
+      "appliesTo": "src/Default.html",
+      "type": "launch"
+    }
+  ]
+}

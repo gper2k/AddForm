@@ -1,0 +1,4 @@
+html fieldset, html fieldset * 
+{ box-sizing: border-box; line-height:1em; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; outline: none !important; }
+
+fieldset > slot { display: inline-block; border:3px solid gray; }
