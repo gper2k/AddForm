@@ -1,0 +1,14 @@
+super {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+super input {
+  outline: none !important;
+}
+/*# sourceMappingURL=SuperControl.css.map */

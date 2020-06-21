@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAYA,AAAA,KAAK,CAAC;EACF,UAAU,EAAE,UAAU;EAAE,WAAW,EAAC,GAAG;EAAE,mBAAmB,EAAC,IAAI;EAAE,gBAAgB,EAAC,IAAI;EAAE,eAAe,EAAC,IAAI;EAAE,WAAW,EAAC,IAAI;CAGnI;;AAJD,AAGI,KAHC,CAGC,KAAK,CAAC;EAAE,OAAO,EAAE,eAAe;CAAI",
+    "sources": [
+        "SuperControl.scss"
+    ],
+    "names": [],
+    "file": "SuperControl.css"
+}

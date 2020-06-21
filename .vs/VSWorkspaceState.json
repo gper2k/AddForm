@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\scss"
+    "\\scss",
+    "\\src",
+    "\\TS"
   ],
+  "SelectedNode": "\\TS\\SuperControl.ts",
   "PreviewInSolutionExplorer": false
 }

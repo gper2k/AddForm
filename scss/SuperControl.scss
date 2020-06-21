@@ -1,0 +1,17 @@
+$defaultColor:#d1d1d1;
+$blue: #1271ca;
+$sky: #03a9f4;
+$green: #6b9f2f;
+$yellow: #ffb300;
+$red: #fa322b;
+$orange: #e97f02;
+$brown:#66401d;
+$dark:#333;
+$validColor: red;
+
+
+super { 
+    box-sizing: border-box; line-height:1em; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;
+
+    & input { outline: none !important; }
+}

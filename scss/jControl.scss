@@ -9,6 +9,15 @@ $brown:#66401d;
 $dark:#333;
 $validColor: red;
 
+
+super { 
+    box-sizing: border-box; line-height:1em; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;
+
+    & input { outline: none !important; }
+}
+
+
+/********************************* Old ***********************************/
 fieldset, fieldset * 
 { box-sizing: border-box; line-height:1em; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; outline: none !important; }
 
