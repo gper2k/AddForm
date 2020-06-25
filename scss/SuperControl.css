@@ -1,13 +1,8 @@
 @charset "UTF-8";
-super {
-  font-family: -apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',helvetica,'Apple SD Gothic Neo',sans-serif;
-}
-
-super, super * {
+input-box, input-box *, input-group, input-group * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
-  float: left;
   width: 100%;
   font-size: 1em;
   line-height: 1em;
@@ -17,38 +12,246 @@ super, super * {
   user-select: none;
 }
 
-super input {
+input-group {
+  width: 100%;
+  height: 32px;
+  position: relative;
   padding: 0;
   margin: 0;
-  width: 100%;
-  float: left;
+  margin-top: 10px;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+input-group > * {
+  width: 1%;
+  height: 30.5px;
+  padding: 8px;
+  margin: 0;
   font-size: 1em;
   line-height: 1em;
-  outline: none !important;
   border: none;
+  border-right: 1px solid #b3b3b3;
+}
+
+input-group > *:first-child {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+input-group > *:last-child {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border: none;
+}
+
+input-group > input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  outline: none !important;
   background-color: transparent;
 }
 
-super > super-header {
+input-group > label, input-group > span, input-group > div, input-group > button {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   width: auto;
-  margin: 8px 10px;
-  color: #444;
-  font-size: 1.3em;
-  font-weight: 600;
+  min-width: 10px;
+  background-color: #e6e6e6;
+  color: #666;
 }
 
-super > super-header.full {
-  width: 100%;
+input-group > button {
+  cursor: pointer;
+  outline: none !important;
 }
 
-super > super-body {
-  width: 100%;
-  position: relative;
-  padding: 5px;
+input-group > button:active {
+  -webkit-box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
+}
+
+input-box {
+  font-family: -apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',helvetica,'Apple SD Gothic Neo',sans-serif;
   margin: 0;
-  border: 1px solid #aaaaaa;
-  border-radius: 3px;
-  -webkit-box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+input-box > * {
+  width: 1%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+input-box > label {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: auto;
+  min-width: 80px;
+  height: 30px;
+  margin: 0;
+  padding: 10px 10px 0 5px;
+  color: #4d4d4d;
+  font-size: 1.1em;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+input-box > label.full {
+  width: 100%;
+}
+
+input-box > input-group:first-of-type {
+  margin: 0;
+}
+
+input-group.blue {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+input-group.blue, input-group.blue > * {
+  border-color: #147ee1;
+  color: #1271ca;
+}
+
+input-group.blue > label, input-group.blue > span, input-group.blue > div, input-group.blue > button {
+  background-color: #52a4f0;
+  color: white;
+}
+
+input-group.blue > button {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+input-group.sky {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+input-group.sky, input-group.sky > * {
+  border-color: #029bd7;
+  color: #0289be;
+}
+
+input-group.sky > label, input-group.sky > span, input-group.sky > div, input-group.sky > button {
+  background-color: #29c1fd;
+  color: white;
+}
+
+input-group.sky > button {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+input-group.green {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+input-group.green, input-group.green > * {
+  border-color: #5f9523;
+  color: #52801e;
+}
+
+input-group.green > label, input-group.green > span, input-group.green > div, input-group.green > button {
+  background-color: #87d034;
+  color: white;
+}
+
+input-group.green > button {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+input-group.yellow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+input-group.yellow, input-group.yellow > * {
+  border-color: #b09e00;
+  color: #968700;
+}
+
+input-group.yellow > label, input-group.yellow > span, input-group.yellow > div, input-group.yellow > button {
+  background-color: #fce300;
+  color: white;
+}
+
+input-group.yellow > button {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+input-group.red {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+input-group.red, input-group.red > * {
+  border-color: #ed3b34;
+  color: #eb241d;
+}
+
+input-group.red > label, input-group.red > span, input-group.red > div, input-group.red > button {
+  background-color: #f37f7b;
+  color: white;
+}
+
+input-group.red > button {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+input-group.orange {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+input-group.orange, input-group.orange > * {
+  border-color: #db7c01;
+  color: #c26e01;
+}
+
+input-group.orange > label, input-group.orange > span, input-group.orange > div, input-group.orange > button {
+  background-color: #fea22b;
+  color: white;
+}
+
+input-group.orange > button {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+input-group.brown {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+input-group.brown, input-group.brown > * {
+  border-color: #805d2e;
+  color: #6d4f27;
+}
+
+input-group.brown > label, input-group.brown > span, input-group.brown > div, input-group.brown > button {
+  background-color: #b88542;
+  color: white;
+}
+
+input-group.brown > button {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 /*# sourceMappingURL=SuperControl.css.map */

@@ -14,15 +14,6 @@ var SuperControl;
         Starter.prototype.bind = function (selecter) {
             var sc = this;
             $(selecter).find("super").each(function () {
-                var elm = this;
-                var type = elm.attributes["type"] == undefined ? ControlTypes.text : ControlTypes[elm.attributes["type"].value];
-                if (sc.items.some(function (p) { return p.target == elm; }))
-                    sc.items.splice(sc.items.findIndex(function (p) { return p.target == elm; }), 1);
-                switch (type) {
-                    default:
-                        sc.items.push(new TextBox(elm));
-                        break;
-                }
             });
             return this;
         };
@@ -54,12 +45,6 @@ var SuperControl;
             this.bind();
         }
         TextBox.prototype.bind = function () {
-            var _this = this;
-            addTitle(this);
-            var tWrap = addTag(this.target, "super-body", function () { return "<super-body></super-body>"; });
-            var tInp = addTag(tWrap, "input[type=text]", function () { return "<input type=\"text\" value=\"" + (_this.value == undefined ? "" : _this.value) + "\" />"; });
-            addAttr(tInp, "id", this.id);
-            addAttr(tInp, "name", this.name);
         };
         return TextBox;
     }());

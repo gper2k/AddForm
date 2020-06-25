@@ -24,7 +24,7 @@ namespace SuperControl {
         bind(selecter:string):Starter {
             const sc = this;
             $(selecter).find("super").each(function(){
-                const elm = this;
+                /*const elm = this;
                 const type = elm.attributes["type"] == undefined ? ControlTypes.text : ControlTypes[elm.attributes["type"].value];
                 if(sc.items.some(p => p.target == elm))
                     sc.items.splice(sc.items.findIndex(p => p.target == elm), 1);                
@@ -33,7 +33,7 @@ namespace SuperControl {
                     default:
                         sc.items.push(new TextBox(elm));
                         break;
-                }
+                }*/
             });
             return this;
         }
@@ -69,11 +69,8 @@ namespace SuperControl {
         }
 
         bind():void {
-            addTitle(this);
-            const tWrap = addTag(this.target, "super-body", () => `<super-body></super-body>`);
-            const tInp = addTag(tWrap, "input[type=text]", () => `<input type="text" value="${ this.value == undefined ? "" : this.value}" />`);
-            addAttr(tInp, "id", this.id);
-            addAttr(tInp, "name", this.name);
+
+            
         }
     }
 }
