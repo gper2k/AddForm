@@ -18,11 +18,11 @@ input-group {
   position: relative;
   padding: 0;
   margin: 0;
-  margin-top: 10px;
-  border: 1px solid #b3b3b3;
+  margin-top: .75em;
+  border: 1px solid #cccccc;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.15);
-          box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.15);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,13 +35,13 @@ input-group {
 
 input-group > * {
   width: 1%;
-  height: 30.5px;
+  height: 30.2px;
   padding: 8px;
   margin: 0;
   font-size: 1em;
   line-height: 1em;
   border: none;
-  border-right: 1px solid #b3b3b3;
+  border-right: 1px solid #cccccc;
 }
 
 input-group > *:first-child {
@@ -63,14 +63,44 @@ input-group > input {
   background-color: transparent;
 }
 
-input-group > label, input-group > span, input-group > div, input-group > button {
+input-group > label, input-group > span, input-group > div, input-group > button, input-group > checkbox {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
   width: auto;
   min-width: 10px;
-  background-color: #e6e6e6;
+  text-align: center;
+  background-color: #f0f0f0;
   color: #666;
+}
+
+input-group > checkbox {
+  cursor: pointer;
+}
+
+input-group > checkbox:before {
+  content: "";
+  float: left;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  margin: 1px 0 0 0;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  background-color: #e6e6e6;
+}
+
+input-group > checkbox[checked]:after {
+  content: "\2713";
+  float: left;
+  width: 10px;
+  height: 10px;
+  font-family: -apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',helvetica,'Apple SD Gothic Neo',sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  color: gray;
+  margin: -1px 0 0 -11px;
 }
 
 input-group > button {
@@ -79,14 +109,39 @@ input-group > button {
 }
 
 input-group > button:active {
-  -webkit-box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
-          box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+input-group.big {
+  margin: 1.5em 0;
+  height: 42px;
+}
+
+input-group.big > * {
+  height: 40.2px;
+  padding: 12px;
+  font-size: 1.2em;
+  line-height: 1em;
+}
+
+input-group.superbig {
+  margin: 1.5em 0;
+  height: 56px;
+}
+
+input-group.superbig > * {
+  height: 54.2px;
+  padding: 19px;
+  font-size: 1.35em;
+  line-height: 1em;
+  font-weight: 500;
 }
 
 input-box {
   font-family: -apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',helvetica,'Apple SD Gothic Neo',sans-serif;
   margin: 0;
-  margin-top: 10px;
+  margin-top: .75em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,128 +185,192 @@ input-box > input-group:first-of-type {
 }
 
 input-group.blue {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input-group.blue, input-group.blue > * {
-  border-color: #147ee1;
+  border-color: #248beb;
   color: #1271ca;
 }
 
 input-group.blue > label, input-group.blue > span, input-group.blue > div, input-group.blue > button {
-  background-color: #52a4f0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#b9daf9), to(#248beb));
+  background: linear-gradient(#b9daf9, #248beb);
   color: white;
 }
 
 input-group.blue > button {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input-group.sky {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input-group.sky, input-group.sky > * {
-  border-color: #029bd7;
+  border-color: #03adf0;
   color: #0289be;
 }
 
 input-group.sky > label, input-group.sky > span, input-group.sky > div, input-group.sky > button {
-  background-color: #29c1fd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#98e1fe), to(#03adf0));
+  background: linear-gradient(#98e1fe, #03adf0);
   color: white;
 }
 
 input-group.sky > button {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input-group.green {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input-group.green, input-group.green > * {
-  border-color: #5f9523;
+  border-color: #6ca928;
   color: #52801e;
 }
 
 input-group.green > label, input-group.green > span, input-group.green > div, input-group.green > button {
-  background-color: #87d034;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bde58f), to(#6ca928));
+  background: linear-gradient(#bde58f, #6ca928);
   color: white;
 }
 
 input-group.green > button {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input-group.yellow {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input-group.yellow, input-group.yellow > * {
-  border-color: #b09e00;
-  color: #968700;
+  border-color: #dfc800;
+  color: #ac9a00;
 }
 
 input-group.yellow > label, input-group.yellow > span, input-group.yellow > div, input-group.yellow > button {
-  background-color: #fce300;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff283), to(#dfc800));
+  background: linear-gradient(#fff283, #dfc800);
   color: white;
 }
 
 input-group.yellow > button {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input-group.red {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input-group.red, input-group.red > * {
-  border-color: #ed3b34;
-  color: #eb241d;
+  border-color: #df2018;
+  color: #b11913;
 }
 
 input-group.red > label, input-group.red > span, input-group.red > div, input-group.red > button {
-  background-color: #f37f7b;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f5a8a5), to(#df2018));
+  background: linear-gradient(#f5a8a5, #df2018);
   color: white;
 }
 
 input-group.red > button {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input-group.orange {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input-group.orange, input-group.orange > * {
-  border-color: #db7c01;
-  color: #c26e01;
+  border-color: #e97c00;
+  color: #b66100;
 }
 
 input-group.orange > label, input-group.orange > span, input-group.orange > div, input-group.orange > button {
-  background-color: #fea22b;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffca8d), to(#e97c00));
+  background: linear-gradient(#ffca8d, #e97c00);
   color: white;
 }
 
 input-group.orange > button {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input-group.brown {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input-group.brown, input-group.brown > * {
-  border-color: #805d2e;
+  border-color: #936a34;
   color: #6d4f27;
 }
 
 input-group.brown > label, input-group.brown > span, input-group.brown > div, input-group.brown > button {
-  background-color: #b88542;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d8ba92), to(#936a34));
+  background: linear-gradient(#d8ba92, #936a34);
   color: white;
 }
 
 input-group.brown > button {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+input-group.violet {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+input-group.violet, input-group.violet > * {
+  border-color: #7741aa;
+  color: #5d3385;
+}
+
+input-group.violet > label, input-group.violet > span, input-group.violet > div, input-group.violet > button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#c8aee0), to(#7741aa));
+  background: linear-gradient(#c8aee0, #7741aa);
+  color: white;
+}
+
+input-group.violet > button {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+input-group.aqua {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+input-group.aqua, input-group.aqua > * {
+  border-color: #00bac7;
+  color: #008a94;
+}
+
+input-group.aqua > label, input-group.aqua > span, input-group.aqua > div, input-group.aqua > button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#6bf5ff), to(#00bac7));
+  background: linear-gradient(#6bf5ff, #00bac7);
+  color: white;
+}
+
+input-group.aqua > button {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+input-group.pink {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+input-group.pink, input-group.pink > * {
+  border-color: #f10085;
+  color: #be0069;
+}
+
+input-group.pink > label, input-group.pink > span, input-group.pink > div, input-group.pink > button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff95d0), to(#f10085));
+  background: linear-gradient(#ff95d0, #f10085);
+  color: white;
+}
+
+input-group.pink > button {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 /*# sourceMappingURL=SuperControl.css.map */
